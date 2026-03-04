@@ -1,0 +1,172 @@
+.list {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  background: var(--bg);
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background .1s;
+}
+
+.table tbody tr:last-child { border-bottom: none; }
+.table tbody tr:hover { background: #fafbff; }
+
+.table td {
+  padding: 12px 16px;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.row_invoiced { opacity: .75; }
+.row_skipped  { opacity: .5; }
+
+.reinvoiceId {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.entryText {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.right { text-align: right; }
+.nowrap { white-space: nowrap; }
+
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.badge_pending  { background: #fef9c3; color: #854d0e; }
+.badge_invoiced { background: #dcfce7; color: #14532d; }
+.badge_skipped  { background: #f1f5f9; color: #64748b; }
+
+.subtext {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ── Action buttons ── */
+.actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.btnPrimary {
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.btnPrimary:hover { background: var(--primary-hover); }
+
+.btnSecondary {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.btnSecondary:hover { background: #e8eaf6; }
+
+.btnDanger {
+  background: none;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: color .15s, background .15s;
+}
+.btnDanger:hover { color: var(--danger); background: #fef2f2; }
+
+.draftId {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: ui-monospace, monospace;
+  margin-top: 2px;
+}
+
+.customerInvoiceCell {
+  min-width: 160px;
+}
+
+.customerName {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.dimBadge {
+  display: inline-block;
+  margin-left: 6px;
+  background: #eff6ff;
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  vertical-align: middle;
+}
+
+.uploadedTag {
+  font-size: 11px;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* ── Empty state ── */
+.empty {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.emptyIcon { font-size: 40px; margin-bottom: 12px; }
+.emptyHint { font-size: 12px; margin-top: 6px; }
